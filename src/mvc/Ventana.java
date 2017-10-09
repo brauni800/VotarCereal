@@ -7,8 +7,8 @@ import javax.swing.JLabel;
 @SuppressWarnings("serial")
 public class Ventana extends JFrame {
 
-	private JButton btnZucaritas, btnFruitloops, btnChocokripis;
-	private JLabel lblZucaritas, lblFruitloops, lblChocokrispis;
+	private JButton btn1, btn2, btn3;
+	private JLabel lbl1, lbl2, lbl3;
 
 	/**
 	 * Create the frame.
@@ -23,55 +23,55 @@ public class Ventana extends JFrame {
 		setVisible(true);
 		getContentPane().setLayout(null);
 		
-		btnZucaritas = new JButton("zucaritas");
-		btnZucaritas.setBounds(30, 50, 117, 25);
-		getContentPane().add(btnZucaritas);
+		btn1 = new JButton();
+		btn1.setBounds(30, 50, 117, 25);
+		getContentPane().add(btn1);
 		
-		btnFruitloops = new JButton("fruitloops");
-		btnFruitloops.setBounds(183, 50, 117, 25);
-		getContentPane().add(btnFruitloops);
+		btn2 = new JButton();
+		btn2.setBounds(183, 50, 117, 25);
+		getContentPane().add(btn2);
 		
-		btnChocokripis = new JButton("chocokripis");
-		btnChocokripis.setBounds(328, 50, 117, 25);
-		getContentPane().add(btnChocokripis);
+		btn3 = new JButton();
+		btn3.setBounds(328, 50, 117, 25);
+		getContentPane().add(btn3);
 		
-		lblZucaritas = new JLabel("0");
-		lblZucaritas.setBounds(85, 100, 20, 20);
-		lblZucaritas.setVisible(true);
-		getContentPane().add(lblZucaritas);
+		lbl1 = new JLabel("0");
+		lbl1.setBounds(85, 100, 20, 20);
+		lbl1.setVisible(true);
+		getContentPane().add(lbl1);
 		
-		lblFruitloops = new JLabel("0");
-		lblFruitloops.setBounds(235, 100, 20, 20);
-		lblFruitloops.setVisible(true);
-		getContentPane().add(lblFruitloops);
+		lbl2 = new JLabel("0");
+		lbl2.setBounds(235, 100, 20, 20);
+		lbl2.setVisible(true);
+		getContentPane().add(lbl2);
 		
-		lblChocokrispis = new JLabel("0");
-		lblChocokrispis.setBounds(380, 100, 20, 20);
-		lblChocokrispis.setVisible(true);
-		getContentPane().add(lblChocokrispis);
+		lbl3 = new JLabel("0");
+		lbl3.setBounds(380, 100, 20, 20);
+		lbl3.setVisible(true);
+		getContentPane().add(lbl3);
 	}
 
-	public JButton getBtnZucaritas() {
-		return btnZucaritas;
+	public JButton getBtn1() {
+		return btn1;
 	}
 
-	public JButton getBtnFruitloops() {
-		return btnFruitloops;
+	public JButton getBtn2() {
+		return btn2;
 	}
 
-	public JButton getBtnChocokripis() {
-		return btnChocokripis;
+	public JButton getBtn3() {
+		return btn3;
 	}
 
-	public JLabel getLblZucaritas() {
-		return lblZucaritas;
+	public JLabel getLbl1() {
+		return lbl1;
 	}
 
-	public JLabel getLblFruitloops() {
-		return lblFruitloops;
+	public JLabel getLbl2() {
+		return lbl2;
 	}
 
-	public JLabel getLblChocokrispis() {
-		return lblChocokrispis;
+	public JLabel getLbl3() {
+		return lbl3;
 	}
 }

@@ -43,7 +43,7 @@ public class Archivos {
 			numLines = bf.lines().count();
 		} catch (IOException e) {
 			e.getStackTrace();
-			numLines = -1;
+			numLines = 0;
 		}
 		return numLines;
 	}
