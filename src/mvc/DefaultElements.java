@@ -1,12 +1,7 @@
 package mvc;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 public class DefaultElements {
 
-	private String ruta = "buttons.txt";
 	private Ventana view;
 	
 	public DefaultElements(Ventana view) {
@@ -14,19 +9,14 @@ public class DefaultElements {
 	}
 	
 	public void load() {
-		try {
-			loadButtons(new BufferedReader(new FileReader(ruta)));
-		} catch (IOException e) {
-			System.out.println("No hay más lineas");
-			e.getStackTrace();
-		}
+		loadButtons(new Archivos("buttons").getButtonsNames());
 		loadLabels();
 	}
 	
-	private void loadButtons(BufferedReader bf) throws IOException {
-		this.view.getBtn1().setText(bf.readLine());
-		this.view.getBtn2().setText(bf.readLine());
-		this.view.getBtn3().setText(bf.readLine());
+	private void loadButtons(String[] buttonNames) {
+		this.view.getBtn1().setText(buttonNames[0]);
+		this.view.getBtn2().setText(buttonNames[1]);
+		this.view.getBtn3().setText(buttonNames[2]);
 	}
 	
 	private void loadLabels() {

@@ -47,4 +47,18 @@ public class Archivos {
 		}
 		return numLines;
 	}
+	
+	public String[] getButtonsNames() {
+		String[] result = new String[3];
+		BufferedReader bf;
+		try {
+			bf = new BufferedReader(new FileReader(ruta));
+			result[0] = bf.readLine();
+			result[1] = bf.readLine();
+			result[2] = bf.readLine();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 }
