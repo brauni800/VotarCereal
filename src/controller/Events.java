@@ -1,7 +1,10 @@
-package mvc;
+package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import model.Archivos;
+import view.Ventana;
 
 public class Events implements ActionListener {
 

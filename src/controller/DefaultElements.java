@@ -1,4 +1,7 @@
-package mvc;
+package controller;
+
+import model.Archivos;
+import view.Ventana;
 
 public class DefaultElements {
 

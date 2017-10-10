@@ -1,4 +1,6 @@
-package mvc;
+package controller;
+
+import view.Ventana;
 
 public class Controlador {
 	public Controlador() {

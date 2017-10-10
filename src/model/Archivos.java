@@ -1,4 +1,4 @@
-package mvc;
+package model;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -37,9 +37,10 @@ public class Archivos {
 	
 	public long contarLineas() {
 		long numLines = 0;
-		BufferedReader bf;
-		try {
-			bf = new BufferedReader(new FileReader(ruta));
+		try (
+				BufferedReader bf = new BufferedReader(new FileReader(ruta));
+				){
+			
 			numLines = bf.lines().count();
 		} catch (IOException e) {
 			e.getStackTrace();
@@ -50,9 +51,9 @@ public class Archivos {
 	
 	public String[] getButtonsNames() {
 		String[] result = new String[3];
-		BufferedReader bf;
-		try {
-			bf = new BufferedReader(new FileReader(ruta));
+		try (
+				BufferedReader bf = new BufferedReader(new FileReader(ruta));
+				){
 			result[0] = bf.readLine();
 			result[1] = bf.readLine();
 			result[2] = bf.readLine();
