@@ -1,7 +1,7 @@
 package controller;
 
 import model.Archivos;
-import view.Ventana;
+import view.frames.Ventana;
 
 public class DefaultElements {
 

@@ -1,6 +1,6 @@
 package controller;
 
-import view.Ventana;
+import view.frames.Ventana;
 
 public class Controlador {
 	public Controlador() {

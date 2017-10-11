@@ -1,6 +1,6 @@
 package controller.observer;
 
-import view.Ventana;
+import view.frames.Ventana;
 
 public interface Observador {
 
