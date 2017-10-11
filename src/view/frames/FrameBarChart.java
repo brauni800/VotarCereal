@@ -3,28 +3,27 @@ package view.frames;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import view.panels.PieChart;
+import view.panels.BarChart;
 
 @SuppressWarnings("serial")
-public class FramePieChart extends JFrame {
-
-	private PieChart pieChart;
+public class FrameBarChart extends JFrame {
+	private BarChart barChart;
 	private JPanel chartPanel;
 	
-	public FramePieChart() {
+	public FrameBarChart() {
 		initComponents();
 	}
 
 	private void initComponents() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 350, 450, 300);
-		this.pieChart = new PieChart();
-		this.chartPanel = this.pieChart.createChartPanel();
+		setBounds(600, 350, 450, 300);
+		this.barChart = new BarChart();
+		this.chartPanel = this.barChart.createChartPanel();
 		this.add(this.chartPanel);
 		setVisible(true);
 	}
 
-	public PieChart getPieChart() {
-		return pieChart;
+	public BarChart getBarChart() {
+		return barChart;
 	}
 }

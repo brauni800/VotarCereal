@@ -24,9 +24,9 @@ public abstract class Observado {
         }
     }
     
-    public void showWindow() {
-        for (int i = 0; i < this.observador.size(); i++) {
-            this.observador.get(i).showWindow();
-        }
-    }
+    protected void notificar() {}
+    
+    public void addVotos(String name) {}
+    
+    public abstract String getLinesNumbers(String name);
 }
