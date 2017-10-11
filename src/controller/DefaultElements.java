@@ -1,21 +1,32 @@
 package controller;
 
+import controller.observer.Observador;
 import model.Archivos;
 import view.frames.Ventana;
 
 public class DefaultElements {
 
 	private Ventana view;
-	
+	private Observador observador;
+
 	public DefaultElements(Ventana view) {
 		this.view = view;
 	}
 	
+	public DefaultElements(Ventana view, Observador observador) {
+		this.view = view;
+		this.observador = observador;
+	}
+
 	public void load() {
 		loadButtons(new Archivos("buttons").getButtonsNames());
 		loadLabels();
 	}
 	
+	public void loadCharts() {
+		this.observador.update(this.view);
+	}
+
 	private void loadButtons(String[] buttonNames) {
 		this.view.getBtn1().setText(buttonNames[0]);
 		this.view.getBtn2().setText(buttonNames[1]);
